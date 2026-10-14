@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>OG Banner Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background-color: #060a12;
+      font-family: 'Inter', -apple-system, sans-serif;
+      color: #ffffff;
+      position: relative;
+    }
+
+    /* Grid de fondo tecnológico */
+    .bg-grid {
+      position: absolute;
+      inset: 0;
+      background-size: 50px 50px;
+      background-image: 
+        linear-gradient(to right, rgba(56, 189, 248, 0.07) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(56, 189, 248, 0.07) 1px, transparent 1px);
+    }
+    .bg-dots {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(56, 189, 248, 0.25) 1.5px, transparent 1.5px);
+      background-size: 50px 50px;
+      background-position: -1px -1px;
+    }
+    .glow-cyan {
+      position: absolute;
+      top: -120px;
+      left: 100px;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(14, 165, 233, 0.22) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .glow-emerald {
+      position: absolute;
+      bottom: -150px;
+      right: 100px;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.16) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* Contenedor */
+    .banner-container {
+      position: relative;
+      z-index: 2;
+      width: 1200px;
+      height: 630px;
+      padding: 55px 70px 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand-row {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .brand-logo {
+      height: 62px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 0 16px rgba(255, 255, 255, 0.3));
+    }
+    .badge-mg-ops {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 18px;
+      border-radius: 9999px;
+      background: rgba(15, 30, 50, 0.85);
+      border: 1px solid rgba(56, 189, 248, 0.45);
+      box-shadow: 0 0 16px rgba(56, 189, 248, 0.25);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      color: #e0f2fe;
+    }
+    .badge-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #38bdf8;
+      box-shadow: 0 0 8px #38bdf8;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #10b981;
+      letter-spacing: 0.08em;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      padding: 8px 16px;
+      border-radius: 8px;
+    }
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 10px #10b981;
+    }
+
+    /* Centro del banner */
+    .content-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+    }
+
+    .info-col {
+      flex: 1;
+      max-width: 580px;
+    }
+    .tag-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .tag-bar {
+      width: 32px;
+      height: 3px;
+      background: #38bdf8;
+      box-shadow: 0 0 10px #38bdf8;
+    }
+    .tag-text {
+      font-size: 0.86rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: #94a3b8;
+      text-transform: uppercase;
+    }
+
+    .main-title {
+      font-size: 3.5rem;
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 18px;
+      background: linear-gradient(180deg, #ffffff 30%, #cbd5e1 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .description {
+      font-size: 1.12rem;
+      line-height: 1.55;
+      color: #94a3b8;
+      margin-bottom: 24px;
+    }
+
+    .features-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .feature-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #e2e8f0;
+    }
+
+    /* Cards preview a la derecha */
+    .cards-col {
+      display: flex;
+      gap: 20px;
+      width: 470px;
+    }
+    .mini-card {
+      position: relative;
+      flex: 1;
+      height: 270px;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.6);
+    }
+    .card-auditoria {
+      border-color: rgba(16, 185, 129, 0.45);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.6), 0 0 25px rgba(16, 185, 129, 0.2);
+    }
+    .card-supervisoria {
+      border-color: rgba(245, 158, 11, 0.45);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.6), 0 0 25px rgba(245, 158, 11, 0.2);
+    }
+    .mini-card-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.65) contrast(1.1);
+      z-index: 1;
+    }
+    .mini-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(6, 10, 18, 0.3) 0%, rgba(6, 10, 18, 0.7) 50%, rgba(5, 8, 14, 0.96) 100%);
+      z-index: 2;
+    }
+    .mini-card-content {
+      position: relative;
+      z-index: 3;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .mini-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid;
+    }
+    .icon-emerald {
+      background: rgba(16, 185, 129, 0.2);
+      border-color: rgba(16, 185, 129, 0.5);
+      color: #10b981;
+    }
+    .icon-amber {
+      background: rgba(245, 158, 11, 0.2);
+      border-color: rgba(245, 158, 11, 0.5);
+      color: #f59e0b;
+    }
+    .mini-card-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+    .mini-card-sub {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      color: #cbd5e1;
+      text-transform: uppercase;
+      line-height: 1.4;
+    }
+
+    /* Footer */
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 18px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="bg-dots"></div>
+  <div class="glow-cyan"></div>
+  <div class="glow-emerald"></div>
+
+  <div class="banner-container">
+    <!-- Header -->
+    <div class="header">
+      <div class="brand-row">
+        <img src="/Logo Mi Gusto.png" alt="Mi Gusto" class="brand-logo">
+        <div class="badge-mg-ops">
+          <div class="badge-dot"></div>
+          <span>MG OPS</span>
+        </div>
+      </div>
+      <div class="status-badge">
+        <div class="status-dot"></div>
+        <span>SISTEMAS ACTIVOS</span>
+      </div>
+    </div>
+
+    <!-- Contenido Principal -->
+    <div class="content-row">
+      <div class="info-col">
+        <div class="tag-row">
+          <div class="tag-bar"></div>
+          <span class="tag-text">Gestión Operativa de Tiendas & Sucursales</span>
+        </div>
+        <h1 class="main-title">Centro de Operaciones</h1>
+        <p class="description">
+          Acceso centralizado para auditorías bromatológicas, control de estándares comerciales y supervisión operativa de locales Mi Gusto.
+        </p>
+        <div class="features-row">
+          <div class="feature-chip" style="color: #34d399; border-color: rgba(16, 185, 129, 0.3);">
+            ✓ AUDITORÍA
+          </div>
+          <div class="feature-chip" style="color: #fbbf24; border-color: rgba(245, 158, 11, 0.3);">
+            ✓ SUPERVISORÍA
+          </div>
+          <div class="feature-chip" style="color: #38bdf8; border-color: rgba(56, 189, 248, 0.3);">
+            ⚡ DONWEB CLOUD
+          </div>
+        </div>
+      </div>
+
+      <!-- Mini Cards -->
+      <div class="cards-col">
+        <!-- Auditoría -->
+        <div class="mini-card card-auditoria">
+          <div class="mini-card-bg" style="background-image: url('/images/auditoria.png');"></div>
+          <div class="mini-card-overlay"></div>
+          <div class="mini-card-content">
+            <div class="mini-icon-box icon-emerald">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="m9 12 2 2 4-4"/>
+              </svg>
+            </div>
+            <div>
+              <div class="mini-card-title">Auditoría</div>
+              <div class="mini-card-sub">Calidad, Bromatología y Estándares de Tienda</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Supervisoría -->
+        <div class="mini-card card-supervisoria">
+          <div class="mini-card-bg" style="background-image: url('/images/supervisoria.png');"></div>
+          <div class="mini-card-overlay"></div>
+          <div class="mini-card-content">
+            <div class="mini-icon-box icon-amber">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="8" height="4" x="8" y="2" rx="1" ry="1"/>
+                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                <path d="m9 14 2 2 4-4"/>
+              </svg>
+            </div>
+            <div>
+              <div class="mini-card-title">Supervisoría</div>
+              <div class="mini-card-sub">Supervisión, Apertura/Cierre y Turnos</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <span>MG.OPS • PORTAL DE OPERACIONES</span>
+      <span>© DESARROLLADO POR EL DEPARTAMENTO DE SISTEMAS DE MI GUSTO</span>
+    </div>
+  </div>
+</body>
+</html>
