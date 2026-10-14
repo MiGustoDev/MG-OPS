@@ -6,7 +6,11 @@ export const Header = () => {
   return (
     <header className="header-bar">
       <div className="brand-row">
-        <h1 className="brand-logo-text">{APP_CONFIG.brandName}</h1>
+        <img 
+          src="/Logo Mi Gusto.png" 
+          alt={APP_CONFIG.brandName} 
+          className="brand-logo-img" 
+        />
         <div className="badge-mg-ops">
           <Layers className="badge-mg-ops-icon" size={15} />
           <span>{APP_CONFIG.appName}</span>
