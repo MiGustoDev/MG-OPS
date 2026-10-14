@@ -24,7 +24,7 @@ export const APP_CONFIG = {
       accentColor: "#10b981", // Esmeralda / Cian
       accentBg: "rgba(16, 185, 129, 0.15)",
       accentBorder: "rgba(16, 185, 129, 0.4)",
-      image: "./images/auditoria.png",
+      image: "./auditoria.png",
       status: "ONLINE",
       type: "shield"
     },
@@ -38,7 +38,7 @@ export const APP_CONFIG = {
       accentColor: "#f59e0b", // Ámbar cálido / Dorado
       accentBg: "rgba(245, 158, 11, 0.15)",
       accentBorder: "rgba(245, 158, 11, 0.4)",
-      image: "./images/supervisoria.png",
+      image: "./supervisoria.png",
       status: "ONLINE",
       type: "store"
     }
