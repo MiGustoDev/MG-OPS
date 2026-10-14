@@ -1,43 +1,76 @@
-# MG Ops | Centro de Operaciones - Mi Gusto
+<div align="center">
 
-Plataforma unificada en **React + Vite** para el área de **Operaciones de Mi Gusto**, destinada a la gestión, supervisión y auditoría de tiendas y locales comerciales de venta de empanadas.
+  <img src="public/Logo Mi Gusto.png" alt="Mi Gusto Logo" width="180" />
 
----
+  <br/><br/>
 
-## 🏬 Módulos de Tiendas
+  # MG OPS • Centro de Operaciones
+  ### Plataforma Centralizada de Gestión Operativa, Sucursales y Herramientas
 
-- **Auditoría de Sucursales**:
-  - Enlace: `https://www.migusto.com.ar/operaciones/auditorias/`
-  - Enfoque: Auditorías comerciales en locales, estándares bromatológicos, exhibición de producto en vitrinas, atención y control de calidad.
-- **Supervisoría de Sucursales**:
-  - Enlace: `https://www.migusto.com.ar/operaciones/supervisoria/`
-  - Enfoque: Supervisión operativa en tiendas, control de turnos, apertura y cierre, novedades operativas y servicio.
+  <p align="center">
+    <img src="https://img.shields.io/badge/Mi%20Gusto-Operaciones-0ea5e9?style=for-the-badge&logoColor=white" alt="Mi Gusto" />
+    <img src="https://img.shields.io/badge/React-18.3-61dafb?style=for-the-badge&logo=react&logoColor=black" alt="React" />
+    <img src="https://img.shields.io/badge/Vite-5.4-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+    <img src="https://img.shields.io/badge/DonWeb-Cloud%20Hosting-e11d48?style=for-the-badge" alt="DonWeb" />
+    <img src="https://img.shields.io/badge/Status-Online%20%26%20Active-10b981?style=for-the-badge" alt="Status" />
+  </p>
 
----
+  <p align="center">
+    Portal unificado de alta fidelidad desarrollado para el <b>Área de Operaciones de Mi Gusto</b>.<br/>
+    Permite a supervisores, auditores y personal operativo acceder instantáneamente a los sistemas clave de control en tiendas y a la suite de utilidades digitales de la empresa.
+  </p>
 
-## 🛠️ Comandos de Desarrollo
-
-Para ejecutar el proyecto localmente:
-
-```bash
-# Iniciar servidor de desarrollo
-pnpm run dev
-```
-
-El servidor estará disponible en `http://localhost:5173/`.
-
-Para generar el bundle de producción (para subir a DonWeb):
-
-```bash
-# Compilar proyecto
-pnpm run build
-```
-
-El resultado listo para desplegar se generará en la carpeta `dist/`.
+</div>
 
 ---
 
-## ⚙️ Personalización de Módulos
+## 📸 Galería del Portal
 
-Para editar URLs, títulos, colores o añadir más sucursales/módulos en el futuro, edita directamente:
-`src/config/modules.js`
+<div align="center">
+  <table>
+    <tr>
+      <td width="50%" align="center">
+        <b>🏬 Sucursales & Tiendas</b><br/>
+        <sub>Auditoría bromatológica y supervisión operativa en locales</sub><br/><br/>
+        <img src="public/screenshots/Screenshot_1.png" alt="Vista Sucursales y Tiendas" width="100%" />
+      </td>
+      <td width="50%" align="center">
+        <b>🛠️ Herramientas Digitales</b><br/>
+        <sub>Generador QRgenPRO y Suite Multimedia ScreenFlow</sub><br/><br/>
+        <img src="public/screenshots/Screenshot_2.png" alt="Vista Herramientas" width="100%" />
+      </td>
+    </tr>
+  </table>
+</div>
+
+---
+
+## 🌟 Módulos y Capacidades
+
+### 🏬 Sucursales & Tiendas
+Acceso unificado para el seguimiento y aseguramiento de calidad en toda la red de locales comerciales:
+
+- **🛡️ Auditoría de Locales:** Control bromatológico, cumplimiento de estándares de manipulación de alimentos, temperaturas de horneado, presentación de producto en vitrinas y auditorías comerciales.
+- **📋 Supervisoría de Sucursales:** Gestión de apertura y cierre, control de asistencia, turnos de personal, novedades de tienda y verificación de la calidad de servicio.
+
+### 🛠️ Herramientas Operativas
+Suite de utilidades para potenciar la productividad y comunicación en los puntos de venta:
+
+- **📱 QRgenPRO:** Generador profesional de códigos QR personalizados sin fecha de caducidad, diseñados a medida para cartas digitales, promociones de mostrador y enlaces de tienda.
+- **✨ ScreenFlow:** Plataforma multimedia inteligente para optimización visual: eliminación de fondos con inteligencia artificial, mejora de resolución, rotación, corte y exportación ágil de contenidos para exhibición.
+
+---
+
+## ⚡ Experiencia de Usuario & Diseño
+
+- **Fondo Tecnológico & Cyber-Grid:** Estética oscura inmersiva con cuadrícula técnica, efectos de iluminación sutiles (*glow*) por módulo y partículas.
+- **Navegación Dinámica Fluida:** Cambio instantáneo entre vistas con animaciones optimizadas y retroalimentación sonora sutil mediante Web Audio API.
+- **Atajos de Teclado Operativos:** Acceso ultra veloz a módulos y herramientas mediante teclas numéricas (`1` y `2`).
+- **Diseño Adaptativo Premium:** Interfaz responsive optimizada tanto para estaciones de escritorio en oficinas centrales como para dispositivos móviles en tienda.
+- **Open Graph Ready:** Metadatos y banners de vista previa optimizados para compartir enlaces enriquecidos en WhatsApp y canales de mensajería interna.
+
+---
+
+<div align="center">
+  <sub>© Desarrollado por el Departamento de Sistemas de Mi Gusto | Todos los derechos reservados.</sub>
+</div>
