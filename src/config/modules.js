@@ -48,7 +48,7 @@ export const APP_CONFIG = {
   tools: [
     {
       id: "qrgenpro",
-      title: "QRgenPRO",
+      title: "Generador de QR",
       badgeText: "GENERADOR QR",
       subtitle: "GENERADOR DE QR SIN VENCIMIENTO Y PERSONALIZADO A MEDIDA",
       url: "https://www.migusto.com.ar/tools/QR/",
@@ -62,7 +62,7 @@ export const APP_CONFIG = {
     },
     {
       id: "screenflow",
-      title: "ScreenFlow",
+      title: "Editor de imagen y video",
       badgeText: "EDITOR MULTIMEDIA & IA",
       subtitle: "QUITAR FONDO CON IA, MEJORAR CALIDAD, CORTAR, ROTAR Y EXPORTAR VIDEO",
       url: "https://www.migusto.com.ar/tools/videoeditor/",

@@ -56,8 +56,8 @@ Acceso unificado para el seguimiento y aseguramiento de calidad en toda la red d
 ### 🛠️ Herramientas Operativas
 Suite de utilidades para potenciar la productividad y comunicación en los puntos de venta:
 
-- **📱 QRgenPRO:** Generador profesional de códigos QR personalizados sin fecha de caducidad, diseñados a medida para cartas digitales, promociones de mostrador y enlaces de tienda.
-- **✨ ScreenFlow:** Plataforma multimedia inteligente para optimización visual: eliminación de fondos con inteligencia artificial, mejora de resolución, rotación, corte y exportación ágil de contenidos para exhibición.
+- **📱 Generador de QR (QRgenPRO):** Generador profesional de códigos QR personalizados sin fecha de caducidad, diseñados a medida para cartas digitales, promociones de mostrador y enlaces de tienda.
+- **✨ Editor de imagen y video (ScreenFlow):** Plataforma multimedia inteligente para optimización visual: eliminación de fondos con inteligencia artificial, mejora de resolución, rotación, corte y exportación ágil de contenidos para exhibición.
 
 ---
 
