@@ -7,7 +7,7 @@ export const Header = () => {
     <header className="header-bar">
       <div className="brand-row">
         <img 
-          src="/Logo Mi Gusto.png" 
+          src="./Logo Mi Gusto.png" 
           alt={APP_CONFIG.brandName} 
           className="brand-logo-img" 
         />

@@ -24,7 +24,7 @@ export const APP_CONFIG = {
       accentColor: "#10b981", // Esmeralda / Cian
       accentBg: "rgba(16, 185, 129, 0.15)",
       accentBorder: "rgba(16, 185, 129, 0.4)",
-      image: "/images/auditoria.png",
+      image: "./images/auditoria.png",
       status: "ONLINE",
       type: "shield"
     },
@@ -38,7 +38,7 @@ export const APP_CONFIG = {
       accentColor: "#f59e0b", // Ámbar cálido / Dorado
       accentBg: "rgba(245, 158, 11, 0.15)",
       accentBorder: "rgba(245, 158, 11, 0.4)",
-      image: "/images/supervisoria.png",
+      image: "./images/supervisoria.png",
       status: "ONLINE",
       type: "store"
     }
@@ -56,7 +56,7 @@ export const APP_CONFIG = {
       accentColor: "#06b6d4",
       accentBg: "rgba(6, 182, 212, 0.15)",
       accentBorder: "rgba(6, 182, 212, 0.4)",
-      image: "/qrgenpro.png",
+      image: "./qrgenpro.png",
       status: "ONLINE",
       type: "qr"
     },
@@ -70,7 +70,7 @@ export const APP_CONFIG = {
       accentColor: "#a855f7",
       accentBg: "rgba(168, 85, 247, 0.15)",
       accentBorder: "rgba(168, 85, 247, 0.4)",
-      image: "/screenflow.png",
+      image: "./screenflow.png",
       status: "ONLINE",
       type: "video"
     }
