@@ -1,23 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { Wrench, FileTerminal } from 'lucide-react';
+import { Wrench } from 'lucide-react';
 import { Header } from './components/Header';
 import { Sidebar } from './components/Sidebar';
 import { ModuleCard } from './components/ModuleCard';
 import { Footer } from './components/Footer';
 import { Modal } from './components/Modal';
 import { ToolsContent } from './components/ToolsContent';
-import { LogsContent } from './components/LogsContent';
 import { APP_CONFIG } from './config/modules';
 
 export function App() {
   const [activeTab, setActiveTab] = useState('tiendas');
   const [isToolsOpen, setIsToolsOpen] = useState(false);
-  const [isLogsOpen, setIsLogsOpen] = useState(false);
 
   // Atajos de teclado para acceso rápido a las tiendas
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (isToolsOpen || isLogsOpen) return;
+      if (isToolsOpen) return;
       if (e.key === '1') {
         const auditoriaCard = document.getElementById('card-auditoria');
         if (auditoriaCard) auditoriaCard.click();
@@ -29,7 +27,7 @@ export function App() {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isToolsOpen, isLogsOpen]);
+  }, [isToolsOpen]);
 
   return (
     <>
@@ -49,7 +47,6 @@ export function App() {
             activeTab={activeTab}
             setActiveTab={setActiveTab}
             onOpenTools={() => setIsToolsOpen(true)}
-            onOpenLogs={() => setIsLogsOpen(true)}
           />
 
           <section className="cards-area">
@@ -73,16 +70,6 @@ export function App() {
         icon={Wrench}
       >
         <ToolsContent />
-      </Modal>
-
-      {/* Modal de Logs */}
-      <Modal 
-        isOpen={isLogsOpen}
-        onClose={() => setIsLogsOpen(false)}
-        title="Telemetría y Estado de Conexión"
-        icon={FileTerminal}
-      >
-        <LogsContent />
       </Modal>
     </>
   );

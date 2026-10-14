@@ -1,9 +1,9 @@
 import React from 'react';
-import { Store, Wrench, FileTerminal } from 'lucide-react';
+import { Store, Wrench } from 'lucide-react';
 import { APP_CONFIG } from '../config/modules';
 import { playSound } from '../utils/sound';
 
-export const Sidebar = ({ onOpenTools, onOpenLogs, activeTab, setActiveTab }) => {
+export const Sidebar = ({ onOpenTools, activeTab, setActiveTab }) => {
   return (
     <section className="hero-column">
       <div className="hero-header">
@@ -42,19 +42,6 @@ export const Sidebar = ({ onOpenTools, onOpenLogs, activeTab, setActiveTab }) =>
         >
           <Wrench size={18} />
           <span>Herramientas</span>
-        </button>
-
-        <button 
-          type="button" 
-          className="nav-btn btn-logs"
-          onClick={() => {
-            playSound(800, 0.04, 'sine', 0.03);
-            onOpenLogs();
-          }}
-          onMouseEnter={() => playSound(480, 0.02, 'sine', 0.015)}
-        >
-          <FileTerminal size={18} />
-          <span>Logs de Sistema</span>
         </button>
       </nav>
     </section>

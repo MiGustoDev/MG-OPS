@@ -9,7 +9,7 @@ export const APP_CONFIG = {
   sectionTag: "Gestión Operativa de Tiendas & Sucursales",
   title: "Centro de Operaciones",
   description: "Seleccione el área de trabajo para iniciar la carga de informes de sucursal, control de turnos, novedades de locales, planillas y auditorías comerciales.",
-  copyright: "ÁREA DE OPERACIONES | SISTEMAS MI GUSTO © 2024 - 2026",
+  copyright: "© Desarrollado por el Departamento de Sistemas de Mi Gusto | Todos los derechos reservados.",
   
   // Módulos principales para tiendas de empanadas
   modules: [
@@ -23,7 +23,7 @@ export const APP_CONFIG = {
       accentColor: "#10b981", // Esmeralda / Cian
       accentBg: "rgba(16, 185, 129, 0.15)",
       accentBorder: "rgba(16, 185, 129, 0.4)",
-      image: "/images/auditoria.jpg",
+      image: "/images/auditoria.png",
       status: "ONLINE",
       type: "shield"
     },
@@ -37,7 +37,7 @@ export const APP_CONFIG = {
       accentColor: "#f59e0b", // Ámbar cálido / Dorado
       accentBg: "rgba(245, 158, 11, 0.15)",
       accentBorder: "rgba(245, 158, 11, 0.4)",
-      image: "/images/supervisoria.jpg",
+      image: "/images/supervisoria.png",
       status: "ONLINE",
       type: "store"
     }
