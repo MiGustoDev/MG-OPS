@@ -303,6 +303,18 @@ html, body {
   grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
   gap: 1.75rem;
   max-width: 1100px;
+  animation: fadeInCards 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeInCards {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -478,6 +490,16 @@ html, body {
 .module-card[data-id="supervisoria"]:hover {
   border-color: var(--accent-amber);
   box-shadow: 0 16px 45px rgba(245, 158, 11, 0.22), 0 0 25px rgba(245, 158, 11, 0.16);
+}
+
+.module-card[data-id="qrgenpro"]:hover {
+  border-color: #06b6d4;
+  box-shadow: 0 16px 45px rgba(6, 182, 212, 0.25), 0 0 25px rgba(6, 182, 212, 0.18);
+}
+
+.module-card[data-id="screenflow"]:hover {
+  border-color: #a855f7;
+  box-shadow: 0 16px 45px rgba(168, 85, 247, 0.25), 0 0 25px rgba(168, 85, 247, 0.18);
 }
 
 /* --------------------------------------------------------------------------

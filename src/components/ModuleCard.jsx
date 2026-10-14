@@ -1,9 +1,23 @@
 import React from 'react';
-import { ShieldCheck, ClipboardCheck, ExternalLink, ChevronRight } from 'lucide-react';
+import { ShieldCheck, ClipboardCheck, QrCode, Sparkles, ExternalLink, ChevronRight } from 'lucide-react';
 import { playSound } from '../utils/sound';
 
 export const ModuleCard = ({ module }) => {
-  const isAuditoria = module.id === 'auditoria';
+  const renderIcon = () => {
+    switch (module.type) {
+      case 'shield':
+        return <ShieldCheck size={22} strokeWidth={2.2} />;
+      case 'store':
+        return <ClipboardCheck size={22} strokeWidth={2.2} />;
+      case 'qr':
+        return <QrCode size={22} strokeWidth={2.2} />;
+      case 'video':
+      case 'media':
+        return <Sparkles size={22} strokeWidth={2.2} />;
+      default:
+        return <ShieldCheck size={22} strokeWidth={2.2} />;
+    }
+  };
 
   return (
     <a 
@@ -34,11 +48,7 @@ export const ModuleCard = ({ module }) => {
             color: module.accentColor
           }}
         >
-          {isAuditoria ? (
-            <ShieldCheck size={22} strokeWidth={2.2} />
-          ) : (
-            <ClipboardCheck size={22} strokeWidth={2.2} />
-          )}
+          {renderIcon()}
         </div>
 
         <div className="module-action-icon" title="Abrir sistema de sucursales">

@@ -3,7 +3,7 @@ import { Store, Wrench } from 'lucide-react';
 import { APP_CONFIG } from '../config/modules';
 import { playSound } from '../utils/sound';
 
-export const Sidebar = ({ onOpenTools, activeTab, setActiveTab }) => {
+export const Sidebar = ({ activeTab, setActiveTab }) => {
   return (
     <section className="hero-column">
       <div className="hero-header">
@@ -14,7 +14,9 @@ export const Sidebar = ({ onOpenTools, activeTab, setActiveTab }) => {
       </div>
 
       <p className="hero-description">
-        {APP_CONFIG.description}
+        {activeTab === 'herramientas' 
+          ? APP_CONFIG.descriptionHerramientas 
+          : APP_CONFIG.description}
       </p>
 
       <nav className="nav-buttons-list" aria-label="Navegación del Centro de Operaciones">
@@ -33,10 +35,10 @@ export const Sidebar = ({ onOpenTools, activeTab, setActiveTab }) => {
 
         <button 
           type="button" 
-          className="nav-btn"
+          className={`nav-btn ${activeTab === 'herramientas' ? 'active' : ''}`}
           onClick={() => {
+            setActiveTab('herramientas');
             playSound(750, 0.04, 'sine', 0.03);
-            onOpenTools();
           }}
           onMouseEnter={() => playSound(480, 0.02, 'sine', 0.015)}
         >

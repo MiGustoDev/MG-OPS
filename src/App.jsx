@@ -1,33 +1,30 @@
 import React, { useState, useEffect } from 'react';
-import { Wrench } from 'lucide-react';
 import { Header } from './components/Header';
 import { Sidebar } from './components/Sidebar';
 import { ModuleCard } from './components/ModuleCard';
 import { Footer } from './components/Footer';
-import { Modal } from './components/Modal';
-import { ToolsContent } from './components/ToolsContent';
 import { APP_CONFIG } from './config/modules';
 
 export function App() {
   const [activeTab, setActiveTab] = useState('tiendas');
-  const [isToolsOpen, setIsToolsOpen] = useState(false);
 
-  // Atajos de teclado para acceso rápido a las tiendas
+  const currentCards = activeTab === 'herramientas' ? APP_CONFIG.tools : APP_CONFIG.modules;
+
+  // Atajos de teclado para acceso rápido a las cards actuales
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (isToolsOpen) return;
       if (e.key === '1') {
-        const auditoriaCard = document.getElementById('card-auditoria');
-        if (auditoriaCard) auditoriaCard.click();
+        const card1 = document.getElementById(`card-${currentCards[0]?.id}`);
+        if (card1) card1.click();
       } else if (e.key === '2') {
-        const supervisoriaCard = document.getElementById('card-supervisoria');
-        if (supervisoriaCard) supervisoriaCard.click();
+        const card2 = document.getElementById(`card-${currentCards[1]?.id}`);
+        if (card2) card2.click();
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isToolsOpen]);
+  }, [currentCards]);
 
   return (
     <>
@@ -46,13 +43,12 @@ export function App() {
           <Sidebar 
             activeTab={activeTab}
             setActiveTab={setActiveTab}
-            onOpenTools={() => setIsToolsOpen(true)}
           />
 
           <section className="cards-area">
-            <div className="cards-grid">
-              {APP_CONFIG.modules.map((module) => (
-                <ModuleCard key={module.id} module={module} />
+            <div className="cards-grid" key={activeTab}>
+              {currentCards.map((item) => (
+                <ModuleCard key={item.id} module={item} />
               ))}
             </div>
           </section>
@@ -61,16 +57,6 @@ export function App() {
         {/* Footer con estado de sistemas activos */}
         <Footer />
       </div>
-
-      {/* Modal de Herramientas */}
-      <Modal 
-        isOpen={isToolsOpen}
-        onClose={() => setIsToolsOpen(false)}
-        title="Herramientas de Operaciones de Tienda"
-        icon={Wrench}
-      >
-        <ToolsContent />
-      </Modal>
     </>
   );
 }

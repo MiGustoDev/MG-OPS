@@ -9,6 +9,7 @@ export const APP_CONFIG = {
   sectionTag: "Gestión Operativa de Tiendas & Sucursales",
   title: "Centro de Operaciones",
   description: "Seleccione el área de trabajo para iniciar la carga de informes de sucursal, control de turnos, novedades de locales, planillas y auditorías comerciales.",
+  descriptionHerramientas: "Seleccione la herramienta para la creación de códigos QR personalizados o la edición y optimización multimedia con inteligencia artificial.",
   copyright: "© Desarrollado por el Departamento de Sistemas de Mi Gusto | Todos los derechos reservados.",
   
   // Módulos principales para tiendas de empanadas
@@ -40,6 +41,38 @@ export const APP_CONFIG = {
       image: "/images/supervisoria.png",
       status: "ONLINE",
       type: "store"
+    }
+  ],
+
+  // Herramientas operativas
+  tools: [
+    {
+      id: "qrgenpro",
+      title: "QRgenPRO",
+      badgeText: "GENERADOR QR",
+      subtitle: "GENERADOR DE QR SIN VENCIMIENTO Y PERSONALIZADO A MEDIDA",
+      url: "https://www.migusto.com.ar/tools/QR/",
+      target: "_blank",
+      accentColor: "#06b6d4",
+      accentBg: "rgba(6, 182, 212, 0.15)",
+      accentBorder: "rgba(6, 182, 212, 0.4)",
+      image: "/qrgenpro.png",
+      status: "ONLINE",
+      type: "qr"
+    },
+    {
+      id: "screenflow",
+      title: "ScreenFlow",
+      badgeText: "EDITOR MULTIMEDIA & IA",
+      subtitle: "QUITAR FONDO CON IA, MEJORAR CALIDAD, CORTAR, ROTAR Y EXPORTAR VIDEO",
+      url: "https://www.migusto.com.ar/tools/videoeditor/",
+      target: "_blank",
+      accentColor: "#a855f7",
+      accentBg: "rgba(168, 85, 247, 0.15)",
+      accentBorder: "rgba(168, 85, 247, 0.4)",
+      image: "/screenflow.png",
+      status: "ONLINE",
+      type: "video"
     }
   ],
 
