@@ -9,8 +9,8 @@
 
   <p align="center">
     <img src="https://img.shields.io/badge/Mi%20Gusto-Operaciones-0ea5e9?style=for-the-badge&logoColor=white" alt="Mi Gusto" />
-    <img src="https://img.shields.io/badge/React-18.3-61dafb?style=for-the-badge&logo=react&logoColor=black" alt="React" />
-    <img src="https://img.shields.io/badge/Vite-5.4-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+    <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React" />
+    <img src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
     <img src="https://img.shields.io/badge/DonWeb-Cloud%20Hosting-e11d48?style=for-the-badge" alt="DonWeb" />
     <img src="https://img.shields.io/badge/Status-Online%20%26%20Active-10b981?style=for-the-badge" alt="Status" />
   </p>
