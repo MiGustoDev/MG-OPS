@@ -30,7 +30,7 @@ export const APP_CONFIG = {
     },
     {
       id: "supervisoria",
-      title: "Supervisoría",
+      title: "Consolidado Diario",
       badgeText: "OPERACIÓN EN TIENDA",
       subtitle: "SUPERVISIÓN DE SUCURSALES, APERTURA/CIERRE Y CONTROL DE SERVICIO",
       url: "https://www.migusto.com.ar/operaciones/supervisoria/",
